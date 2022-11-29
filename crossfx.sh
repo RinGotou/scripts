@@ -1,5 +1,3 @@
-#!/usr/bin/bash
-
 # CrossFX - simple GNU Cross-toolchain maker for code-debugging purpose.
 # Usage: crossfx.sh [option]
 # Available options:
@@ -11,11 +9,9 @@
 # 1. https://blog.jgosmann.de/posts/2021/02/07/a-guide-to-crosscompiling-applications/#dependencies-for-building-gcc
 # 2. https://www6.software.ibm.com/developerworks/education/l-cross/l-cross-ltr.pdf
 
-# If you're using macOS, make sure your workspace is inside case-senstive filesystem.
-
 set -e # stop immediately when error occurred.
 
-ulimit -n 1024 # for macOS environment, but it's fine for linux too.
+ulimit -n 1024 # for macOS environment(?)
 
 # Config area. for most cases, you only need to modify these things unless error appears.
 export SRC=$PWD/src
